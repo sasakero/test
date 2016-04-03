@@ -16,12 +16,9 @@ public class GravityContller : MonoBehaviour {
             vector.x = Input.GetAxis("Horizontal");
             vector.z = Input.GetAxis("Vertical");
 
-            if (Input.GetKey("space"))
-            {
+            if (Input.GetKey("space")){
                 vector.y = 1.0f;
-            }
-            else
-            {
+            }else{
                 vector.y = -1.0f;
             }
 

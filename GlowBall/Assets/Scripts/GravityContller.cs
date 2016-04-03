@@ -11,7 +11,7 @@ public class GravityContller : MonoBehaviour {
 	void Update () {
         Vector3 vector = new Vector3();
 
-        if (Application.isEditor){
+//        if (Application.isEditor){
 
             vector.x = Input.GetAxis("Horizontal");
             vector.z = Input.GetAxis("Vertical");
@@ -26,11 +26,11 @@ public class GravityContller : MonoBehaviour {
             }
 
             Physics.gravity = GRAVITY * vector.normalized * gravityScale;
-        }else{
-            //加速度センサ対応
-            vector.x = Input.acceleration.x;
-            vector.z = Input.acceleration.y;
-            vector.y = Input.acceleration.z;
-        }
+//        }else{
+//            //加速度センサ対応
+//            vector.x = Input.acceleration.x;
+//            vector.z = Input.acceleration.y;
+//            vector.y = Input.acceleration.z;
+//        }
 	}
 }
